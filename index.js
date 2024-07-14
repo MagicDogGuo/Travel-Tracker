@@ -8,7 +8,7 @@ const db = new pg.Client({
   user: 'postgres',
   host: 'localhost',
   database: 'world',
-  password: 'password',
+  password: 'passward',
   port: 5432
 });
 
@@ -80,23 +80,6 @@ app.post("/add", async(req,res)=>{
   }
 
 
-
-
-  // let addcountryCode;
-  // const result = await db.query(`SELECT * FROM country WHERE country_name= $1`,[addcountryName]);
-
-  // if (result.rows.length !== 0){
-  //   // addcountryCode = result.rows[0].country_code;
-
-  //   await db.query("INSERT INTO visited_countries(country_code) VALUES($1)",[addcountryCode],(err,res)=>{
-  //     if(err){
-  //       console.log("Error", err.stack);
-  //     }else{      
-  //       console.log("addcountryCode:"+addcountryCode);      
-  //     }
-  //   });
-  //   res.redirect("/");
-  // }
 
 });
 
